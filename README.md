@@ -58,8 +58,8 @@ The OLED shows the device IP and a random 4-character passcode that is required 
 
 ![Project image 6](images/web.jpg)
 
-![Project image 6](images/video_preview.jpg)
-
 ## Demo Video
+
+![Project image 6](images/video_preview.jpg)
 
 [Realtime debug demo - YouTube video](https://youtu.be/YvznlkldbMA)
