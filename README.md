@@ -1,5 +1,5 @@
 # cafetime-freertos-esp32
-A programmable electric outlet to power up the coffee maker in the morning
+A programmable electric outlet to turn the coffee maker up in the morning
 
 This FreeRTOS solution is composed of 6 tasks:
 * TaskBlink (just a testing blink over GPIO)
@@ -8,7 +8,7 @@ This FreeRTOS solution is composed of 6 tasks:
 * TaskStateMachine (monitors commands and time events and produces the state changes)
 * TaskNetworkTime (sync with NTP every 15 min)
 * TaskInternalTime (keeps internal time running)
-* TaskWebServer ()
+* TaskWebServer (handles HTTP requests, letting users change states)
 
 MCU is Espressif ESP-WROOM-32 (aka NodeMCU-32s)  
 OLED is SH1106 connected via I2C
