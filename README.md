@@ -21,10 +21,10 @@ IDE is Platformio
 
 ## Design
 
-The main idea comes from another personal project, a bedside clock. My boss asked me why I didn't just bought one...
+The main idea comes from another personal project, a ESP8266 bedside clock. My boss asked me why I didn't just bought one...
 
-The idea behind this clock is to synchronize via NTP, while being able to keep showing the time if WiFi is temporary out.
-Based on that concept I wanted to add a "schedule" feature to activate a relay. This way, I can program the device to power up the coffee maker in the morning, a few minutes before I get up. 
+The idea behind this clock was to synchronize via NTP, while being able to keep showing the time if WiFi is temporary out.
+Based on that concept I needed a "schedule" feature to activate a relay. This way, I can program the device to power up the coffee maker in the morning, a few minutes before I get up. 
 
 I chose ESP32 over ESP8266 because the dual-core MCU is more interesting for a FreeRTOS project.
 
