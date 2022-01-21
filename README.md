@@ -10,10 +10,10 @@ This FreeRTOS solution is composed of 6 tasks:
 * TaskInternalTime (keeps internal time running)
 * TaskWebServer ()
 
-MCU is Espressif ESP-WROOM-32 (aka NodeMCU-32s).
+MCU is Espressif ESP-WROOM-32 (aka NodeMCU-32s).  
 OLED is SH1106 connected via I2C.
 
-RAM used: 12% (used 41k bytes from 327k bytes).
+RAM used: 12% (used 41k bytes from 327k bytes).  
 Flash used: 58% (used 770k bytes from 1.3M bytes).
 
 IDE is Platformio
@@ -39,8 +39,8 @@ The state machine has 5 states:
 * Keeping warm (outlet power on)
 * Power manually forced on (outlet power on)
 
-The web interface lets the user change states and schedule the power up time.
-Web UI has been kept to a minimum because of space constraints.
+The web interface lets the user change states and schedule the power up time.  
+Web UI has been kept to a minimum because of space constraints.  
 The OLED shows the device IP and a random 4-character passcode that is required when accessing via HTTP.
 
 
