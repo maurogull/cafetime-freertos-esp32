@@ -10,18 +10,18 @@ This FreeRTOS solution is composed of 6 tasks:
 * TaskInternalTime (keeps internal time running)
 * TaskWebServer ()
 
-MCU is Espressif ESP-WROOM-32 (aka NodeMCU-32s).  
-OLED is SH1106 connected via I2C.
+MCU is Espressif ESP-WROOM-32 (aka NodeMCU-32s) 
+OLED is SH1106 connected via I2C
 
-RAM used: 12% (used 41k bytes from 327k bytes).  
-Flash used: 58% (used 770k bytes from 1.3M bytes).
+RAM used: 12% (used 41k bytes from 327k bytes). 
+Flash used: 58% (used 770k bytes from 1.3M bytes)
 
 IDE is Platformio
 
 
 ## Design
 
-The main idea comes from another personal project, a ESP8266 bedside clock. My boss asked me why I didn't just bought one...
+The main idea comes from another personal project, an ESP8266 bedside clock. My boss asked me why I didn't just bought one...
 
 The idea behind this clock was to synchronize via NTP, while being able to keep showing the time if WiFi is temporary out.
 Based on that concept I needed a "schedule" feature to activate a relay. This way, I can program the device to power up the coffee maker in the morning, a few minutes before I get up. 
