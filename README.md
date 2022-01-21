@@ -13,8 +13,8 @@ This FreeRTOS solution is composed of 6 tasks:
 MCU is Espressif ESP-WROOM-32 (aka NodeMCU-32s).
 OLED is SH1106 connected via I2C.
 
-RAM used: 12% (used 41k bytes from 327k bytes)
-Flash used: 58% (used 770k bytes from 1.3M bytes)
+RAM used: 12% (used 41k bytes from 327k bytes).
+Flash used: 58% (used 770k bytes from 1.3M bytes).
 
 IDE is Platformio
 
