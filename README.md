@@ -2,8 +2,8 @@
 A programmable electric outlet to power up the coffee maker in the morning
 
 This FreeRTOS solution is composed of 6 tasks:
-· TaskBlink (just a testing blink over GPIO)
-· TaskTester (send fake commands to the queue sequentially)
+* TaskBlink (just a testing blink over GPIO)
+* TaskTester (send fake commands to the queue sequentially)
 · TaskDisplay (updates OLED)
 · TaskStateMachine (monitors commands and time events and produces the state changes)
 · TaskNetworkTime (sync with NTP every 15 min)
