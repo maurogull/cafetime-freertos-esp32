@@ -1,5 +1,5 @@
 # cafetime-freertos-esp32
-A programmable electric outlet to turn the coffee maker up in the morning
+A wifi programmable electric outlet to turn the coffee maker up in the morning
 
 This FreeRTOS solution is composed of 7 tasks:
 * TaskBlink (just a testing blink over GPIO)
