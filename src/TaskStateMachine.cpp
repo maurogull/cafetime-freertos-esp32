@@ -89,6 +89,7 @@ void TaskStateMachine(void * pvParam) {
         //notify change (webserver is awaiting for this)
         if(currentState != prevState) { 
             xSemaphoreGive(xStateChangedSemaphore);
+            prevState = currentState;
         }
 
         vTaskDelay(pdMS_TO_TICKS(600));
