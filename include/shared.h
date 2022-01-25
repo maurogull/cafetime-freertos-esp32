@@ -9,7 +9,7 @@
 extern DebugConsole Console;
 
 
-// ---- semaphores (mutexes) and general timing global variables
+// ---- semaphores and general timing global variables
 
 extern SemaphoreHandle_t xTimeSemaphore;
 extern int horas, minutos, segundos;
@@ -19,6 +19,9 @@ extern int scheduledHour, scheduledMinute;
 
 extern int timeIsReliable;
 extern int internalUpdates;
+
+
+extern SemaphoreHandle_t xStateChangedSemaphore;
 
 
 // ---- states

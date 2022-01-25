@@ -5,7 +5,7 @@
 
 void TaskStateMachine(void * pvParam) {
 
-
+    CafeState prevState = CAFE_IDLE;
     vTaskDelay(pdMS_TO_TICKS(9e3));
 
 
@@ -86,7 +86,10 @@ void TaskStateMachine(void * pvParam) {
         }
 
         
-
+        //notify change (webserver is awaiting for this)
+        if(currentState != prevState) { 
+            xSemaphoreGive(xStateChangedSemaphore);
+        }
 
         vTaskDelay(pdMS_TO_TICKS(600));
         

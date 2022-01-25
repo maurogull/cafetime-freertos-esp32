@@ -30,6 +30,7 @@ void setup() {
 
     xTimeSemaphore = xSemaphoreCreateMutex();
     xScheduleSemaphore = xSemaphoreCreateMutex();
+    xStateChangedSemaphore = xSemaphoreCreateBinary();
 
     xCommandQueue = xQueueCreate( 20, sizeof( int32_t ) );
 

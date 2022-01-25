@@ -10,7 +10,7 @@ DebugConsole Console;
 
 
 
-// ---- semaphores (mutexes) and general timing global variables
+// ---- semaphores and general timing global variables
 
 SemaphoreHandle_t xTimeSemaphore = NULL;
 int horas = 0, minutos = 0, segundos = 0;
@@ -20,6 +20,9 @@ int scheduledHour = -1, scheduledMinute = -1;
 
 int timeIsReliable = 0;
 int internalUpdates = 0;
+
+
+SemaphoreHandle_t xStateChangedSemaphore = NULL;
 
 
 

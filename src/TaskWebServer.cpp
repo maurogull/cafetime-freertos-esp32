@@ -48,7 +48,7 @@ void TaskWebServer(void * pvParam) {
         commandData = COMMAND_MAKE_IDLE;
         xQueueSend( xCommandQueue, (void *) &commandData, 20 );
 
-        vTaskDelay(pdMS_TO_TICKS(900));
+        xSemaphoreTake(xStateChangedSemaphore, pdMS_TO_TICKS(1000));  //wait state change
 
         server.sendHeader("Location", "/" + HTTPPassCode);
         server.send(302, "redir");
@@ -60,7 +60,7 @@ void TaskWebServer(void * pvParam) {
         commandData = COMMAND_FORCE_ON;
         xQueueSend( xCommandQueue, (void *) &commandData, 20 );
 
-        vTaskDelay(pdMS_TO_TICKS(900));
+        xSemaphoreTake(xStateChangedSemaphore, pdMS_TO_TICKS(1000));  //wait state change
 
         server.sendHeader("Location", "/" + HTTPPassCode);
         server.send(302, "redir");
@@ -69,7 +69,8 @@ void TaskWebServer(void * pvParam) {
     server.on("/sched" + superRandom, HTTP_POST, handleSchedule);
 
 
-    vTaskDelay(pdMS_TO_TICKS(10000));
+
+    vTaskDelay(pdMS_TO_TICKS(10000)); 
 
     server.begin();
     Console.print("HTTP server started");
@@ -134,7 +135,8 @@ void showMainForm() {
 }
 
 void handleNotFound() {
-    server.send(404, "text/html", "<body style='font-family:sans-serif'><h1>Error <a href='/'>Volver</a>");
+    server.send(404, "text/html", "<html><head><meta name='viewport' content='width=device-width,initial-scale=1.0'></head>"
+                                            "<body style='font-family:sans-serif'><h1>Error <a href='/'>Volver</a>");
 }
 
 
@@ -149,7 +151,7 @@ void handleSchedule() {
     commandData = server.arg("m").toInt();
     xQueueSend( xCommandQueue, (void *) &commandData, 20 );
 
-    vTaskDelay(pdMS_TO_TICKS(900));
+    xSemaphoreTake(xStateChangedSemaphore, pdMS_TO_TICKS(1000));  //wait state change
 
     server.sendHeader("Location", "/" + HTTPPassCode);
     server.send(302, "redir");

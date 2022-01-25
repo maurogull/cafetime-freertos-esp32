@@ -28,9 +28,12 @@ Based on that concept I needed a "schedule" feature to activate a relay. This wa
 
 I chose ESP32 over ESP8266 because the dual-core MCU is more interesting for a FreeRTOS project.
 
-There are two semaphores (mutexes) being used for critical parts:
+There are two mutexes being used for critical parts:
 * access to current time components (hour, min, sec)
 * access to scheduled time components
+
+And one semaphore for synchronization:
+* wait for a state change (used at webserver)
 
 The state machine has 5 states:
 * Idle (outlet power off)
