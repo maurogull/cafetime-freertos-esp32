@@ -49,13 +49,7 @@ The OLED shows the device IP and a random 4-character passcode that is required 
 
 ## Images
 
-![Project image 1](images/escritorio1.jpg)
-
-![Project image 2](images/escritorio2.jpg)
-
 ![Project image 3](images/escritorio3.jpg)
-
-![Project image 4](images/cafetera1.jpg)
 
 ![Project image 5](images/cafetera2.jpg)
 
