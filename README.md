@@ -21,7 +21,9 @@ IDE is Platformio.
 
 ## Design
 
-The main idea comes from another personal project, an ESP8266 bedside clock. My boss asked me why I didn't just bought one...
+The main idea comes from another personal project, an ESP8266 bedside clock, which I really have at my bedside table today:
+![Old ESP8266 project](images/esp8266-clock.jpg)
+My boss asked me why I didn't just bought one...
 
 The idea behind this clock was to synchronize via NTP, while being able to keep showing the time if WiFi is temporary out.
 Based on that concept I needed a "schedule" feature to activate a relay. This way, I can program the device to power up the coffee maker in the morning, a few minutes before I get up. 
